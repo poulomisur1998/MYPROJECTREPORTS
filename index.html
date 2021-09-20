@@ -1,35 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMI Calculator</title>
-    <link rel="stylesheet" href="main.css">
-    <script src="script.js" defer></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@700&display=swap" rel="stylesheet">
+    <title>
+        Calendar
+    </title>
+    <link rel="stylesheet" href="app.css">
 </head>
-<body>
-    <div class="container">  
-        <h1>BMI Calculator</h1>
-        <label>
-            <input id="h-input" type="number" placeholder="Enter Your Height in centimeters: ">
-        </label>        
-        <label>
-            <input id="w-input" type="number" placeholder="Enter Your Weight in Kilogrames: ">
-        </label>            
-        <button type="submit" onclick="Calculate()">Calculate BMI</button>
-            
-        <div class="bmi-value">
-            <h4>BMI Value: </h4>
-            <div id="bmi-output"></div>
+
+<body class="light">
+
+    <div class="calendar">
+        <div class="calendar-header">
+            <span class="month-picker" id="month-picker">February</span>
+            <div class="year-picker">
+                <span class="year-change" id="prev-year">
+                    <pre><</pre>
+                </span>
+                <span id="year">2021</span>
+                <span class="year-change" id="next-year">
+                    <pre>></pre>
+                </span>
+            </div>
         </div>
-        <div class="status">
-            <h4>Status: </h4>
-            <div id="bmi-status"></div>
-        </div>   
+        <div class="calendar-body">
+            <div class="calendar-week-day">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+            <div class="calendar-days"></div>
+        </div>
+        <div class="calendar-footer">
+            <div class="toggle">
+                <span>Dark Mode</span>
+                <div class="dark-mode-switch">
+                    <div class="dark-mode-switch-ident"></div>
+                </div>
+            </div>
+        </div>
+        <div class="month-list"></div>
     </div>
-    
+
+    <script src="app.js"></script>
 </body>
+
 </html>
